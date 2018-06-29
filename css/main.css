@@ -1,3 +1,12 @@
 
+body {
+ text-align: center;
+  background-color: lightgrey;
+}
+
+.feedback {
+  border: 2px solid blue;
+  color: blue;
+}
 
 /*# sourceMappingURL=main.css.map */
