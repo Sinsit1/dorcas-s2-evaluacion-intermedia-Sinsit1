@@ -40,7 +40,7 @@ function recogerInput () {
   contador += 1;
 
   var showContador = document.querySelector('.counter');
-  feedback.innerHTML= contador;
+  showContador.innerHTML= contador;
 }
 
 button.addEventListener('click', recogerInput);
