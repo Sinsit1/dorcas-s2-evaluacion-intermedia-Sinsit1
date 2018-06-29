@@ -31,6 +31,8 @@ function recogerInput () {
   console.log (entradaDatos);
   if (entradaDatos === numeroAdivinar){
     feedback.innerHTML = 'FELICIDADES!! HAS GANADO!';
+    var ocultar = document.querySelector('.button');
+    button.classList.add('hidden');
   } else if (entradaDatos> numeroAdivinar){
     feedback.innerHTML = 'Te has pasado, intenta un numero menor!';
   }else {
@@ -38,9 +40,9 @@ function recogerInput () {
   }
 
   contador += 1;
-
   var showContador = document.querySelector('.counter');
   showContador.innerHTML= contador;
+
 }
 
 button.addEventListener('click', recogerInput);
