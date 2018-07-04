@@ -31,15 +31,19 @@ function recogerInput () {
   console.log (entradaDatos);
 
   // comparo mi numero random con el numero que he recogido //
-
-  if (entradaDatos === numeroAdivinar){
+  if (entradaDatos < 0 || entradaDatos > 100){
+    feedback.innerHTML = 'El número a introducir tiene que estar contenido entre el 0 y el 100';
+  }
+  else if (entradaDatos === numeroAdivinar){
     feedback.innerHTML = 'FELICIDADES!! HAS GANADO!';
     var ocultar = document.querySelector('.button');
     button.classList.add('hidden');
   } else if (entradaDatos> numeroAdivinar){
     feedback.innerHTML = 'Te has pasado, intenta un numero menor!';
-  }else {
+  }else if (entradaDatos < numeroAdivinar){
     feedback.innerHTML = 'Te has quedado corta, intenta un numero mayor!';
+  } else {
+    feedback.innerHTML = 'El dato a introducir tiene que ser un numero!!';
   }
 
   contador += 1;
