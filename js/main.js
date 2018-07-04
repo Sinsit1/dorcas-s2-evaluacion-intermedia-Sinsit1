@@ -23,10 +23,8 @@ var feedback = document.querySelector(".feedback");
 
 function recogerInput () {
 
-  var entradaDatos;
   var input = document.querySelector('.addValor');
-  entradaDatos = input.value;
-  entradaDatos = parseInt(entradaDatos);
+  var entradaDatos = parseInt(input.value);
 
   console.log (entradaDatos);
 
